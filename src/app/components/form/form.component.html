@@ -1,1 +1,19 @@
-<p>form works!</p>
+<section>
+  <div>
+    <label for="title"></label>
+    <input type="text" id="title" placeholder="Título" [(ngModel)]="newPost.title">
+  </div>
+  <div>
+    <label for="image"></label>
+    <input type="text" id="image" placeholder="Inserta la URL de la imagen" [(ngModel)]="newPost.img">
+  </div>
+  <div>
+    <label for="content"></label>
+    <input type="text" id="content" placeholder="Escribe aquí..." [(ngModel)]="newPost.content">
+  </div>
+  <div>
+    <label for="date"></label>
+    <input type="date" id="date" [(ngModel)]="newPost.date">
+  </div>
+  <button (click)="addPost()">Publicar</button>
+</section>
