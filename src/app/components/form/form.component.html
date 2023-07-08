@@ -11,9 +11,5 @@
     <label for="content"></label>
     <input type="text" id="content" placeholder="Escribe aquí..." [(ngModel)]="newPost.content">
   </div>
-  <div>
-    <label for="date"></label>
-    <input type="date" id="date" [(ngModel)]="newPost.date">
-  </div>
   <button (click)="addPost()">Publicar</button>
 </section>

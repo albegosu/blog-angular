@@ -12,7 +12,11 @@ export class PostsComponent {
   pushPosts(): string {
     let onePost = "";
     this.allPosts.forEach(post => {
-      onePost += `<p>${post.title} - ${post.img} - ${post.content} - ${post.date}</p>`
+      onePost += `
+      <h3>${post.title}</h3>
+      <figcaption> <img src="${post.img}" alt="${post.title}"> </figcaption>
+      <p>${post.content}</p>
+      <span>${post.date}</span>`
     })
     return onePost;
   }
