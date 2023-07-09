@@ -23,7 +23,6 @@ export class FormComponent {
       this.newPost.date = `Publicado: ${time}, ${date}`;
 
       this.pushPost.emit(this.newPost);
-      console.log(this.pushPost);
       this.newPost = {title: "", img: "", content: "", date: ""};
     }else{
       alert('Es necesario rellenar todos los campos.')

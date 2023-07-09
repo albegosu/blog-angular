@@ -45,6 +45,6 @@ export class BlogComponent {
   }
 
   getPosts($event: Post) {
-    this.arrPosts.push($event);
+    this.arrPosts.unshift($event);
   }
 }

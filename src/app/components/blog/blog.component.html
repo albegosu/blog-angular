@@ -1,3 +1,6 @@
-<p>blog works!</p>
-<app-form (pushPost)="getPosts($event)"></app-form>
-<app-posts [allPosts]="arrPosts"></app-posts>
+<header class="headerForm">
+  <app-form (pushPost)="getPosts($event)"></app-form>
+</header>
+<main>
+  <app-posts [allPosts]="arrPosts"></app-posts>
+</main>

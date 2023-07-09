@@ -13,10 +13,12 @@ export class PostsComponent {
     let onePost = "";
     this.allPosts.forEach(post => {
       onePost += `
-      <h3>${post.title}</h3>
-      <figcaption> <img src="${post.img}" alt="${post.title}"> </figcaption>
-      <p>${post.content}</p>
-      <span>${post.date}</span>`
+      <article class="post">
+        <h3 class="post__title">${post.title}</h3>
+        <figcaption> <img src="${post.img}" alt="${post.title}" class="post__img"> </figcaption>
+        <p class="post__text">${post.content}</p>
+        <span class="post__date">${post.date}</span>
+      </article>`
     })
     return onePost;
   }

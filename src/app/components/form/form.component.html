@@ -1,15 +1,17 @@
-<section>
+<section class="form">
   <div>
-    <label for="title"></label>
-    <input type="text" id="title" placeholder="Título" [(ngModel)]="newPost.title">
+    <div class="form__group">
+      <label for="title" class="form__group--label">Título del Post</label>
+      <input type="text" id="title" placeholder="Título" [(ngModel)]="newPost.title" class="form__group--input">
+    </div>
+    <div class="form__group">
+      <label for="image" class="form__group--label">Introduce la URL de la imagen</label>
+      <input type="text" id="image" placeholder="URL" [(ngModel)]="newPost.img" class="form__group--input">
+    </div>
   </div>
-  <div>
-    <label for="image"></label>
-    <input type="text" id="image" placeholder="Inserta la URL de la imagen" [(ngModel)]="newPost.img">
+  <div class="form__group gridContent">
+    <label for="content" class="form__group--label">Contenido Post</label>
+    <textarea type="text" id="content" placeholder="Escribe aquí..." [(ngModel)]="newPost.content" class="form__group--input" cols="30" rows="10"></textarea>
   </div>
-  <div>
-    <label for="content"></label>
-    <input type="text" id="content" placeholder="Escribe aquí..." [(ngModel)]="newPost.content">
-  </div>
-  <button (click)="addPost()">Publicar</button>
+  <button (click)="addPost()" class="form__btn">Publicar</button>
 </section>
