@@ -15,7 +15,7 @@ export class PostsComponent {
       onePost += `
       <article class="post">
         <h3 class="post__title">${post.title}</h3>
-        <figcaption> <img src="${post.img}" alt="${post.title}" class="post__img"> </figcaption>
+        <figure> <img src="${post.img}" alt="${post.title}" class="post__img"> </figure>
         <p class="post__text">${post.content}</p>
         <span class="post__date">${post.date}</span>
       </article>`

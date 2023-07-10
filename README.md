@@ -1,5 +1,26 @@
 # BlogAngular
 
+-> Se crea la práctica entorno a un elemento padre Blog y dos elementos hijos Form y Posts, llamados dentro de Blog. Llamamos a Blog dentro de app-component siguiendo la lógica de que si necesitásemos un navbar y un footer, por ejemplo, estos serían llamados, junto al Blog (elemento padre), en el app-component.
+
+-> En el componente Blog, se crea un arrPosts con dos Posts predeterminados que siempre se mostrarán al iniciar la página. La lógica es que una nueva publicación, se situará siempre en primer lugar siguiendo la temporalidad de publicación (usamos unshift en vez de push para esto).
+
+-> Usamos un Interface Post con las cuatro propiedades que lo conforman.
+
+-> Al tener varios elementos, trabajamos con Inputs y Outputs:
+    `<header class="headerForm">
+      <app-form (pushPost)="getPosts($event)"></app-form>
+    </header>
+    <main>
+      <app-posts [allPosts]="arrPosts"></app-posts>
+    </main>`
+
+-> Nuestro Form, funciona como un Output, al pulsar el botón se activa la función addPost que contiene el emit. La validación contempla recibir únicamente texto en los tres campos disponibles. El campo de fecha y hora de publicación, se autogenerará usando new Date() y dando formato a la fecha.
+En caso de no rellenar todos los inputs, saltará un Alert. 
+
+-> Recorriendo el array creamos un elemento para cada publicación guarda y la inyectamos mediante [innerHTML]
+
+-> Los estilos de los post inyectados se colocan en styles.css para poder ser leídos al generarse (como se comentó en clase)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.3.
 
 ## Development server
