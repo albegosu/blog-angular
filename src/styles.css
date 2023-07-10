@@ -1,1 +1,34 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+  font-family: 'Inconsolata', monospace;
+  background: rgb(244,244,244);
+  background: radial-gradient(circle, rgba(244,244,244,1) 0%, rgba(210,210,210,1) 100%);
+  max-width: 1000px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* POSTS STYLES */
+.post{
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid rgb(199, 199, 199);
+  border-radius: 10px;
+  background-color: rgba(206, 206, 206, 0.8);;
+}
+.post__title{
+  text-align: center;
+}
+.post__img {
+  object-fit: cover;
+  max-width: 500px;
+  max-height: 300px;
+}
+.post__date{
+  align-self: end;
+  font-size: 0.8rem;
+  font-weight: 300;
+  color: grey;
+}

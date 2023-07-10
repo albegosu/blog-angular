@@ -1,0 +1,6 @@
+<header class="headerForm">
+  <app-form (pushPost)="getPosts($event)"></app-form>
+</header>
+<main>
+  <app-posts [allPosts]="arrPosts"></app-posts>
+</main>
